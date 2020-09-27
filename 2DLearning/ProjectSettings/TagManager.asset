@@ -15,7 +15,7 @@ TagManager:
   - 
   - Ground
   - Eviroment
-  - 
+  - NPC
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: NPC
+    uniqueID: 855133277
     locked: 0
