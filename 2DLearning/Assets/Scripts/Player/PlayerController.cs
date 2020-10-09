@@ -10,6 +10,17 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpForce;
 
+    [Header("Gound Check")]
+    public Transform groundCheck;
+    public float checkRadius;
+    public LayerMask groundLayer;
+
+
+    [Header("States Check")]
+    public bool isGround;
+    public bool canJump;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +30,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CheckInput();
     }
 
     private void FixedUpdate()
     {
+        PhysicsCheck();
         Movement();
+        Jump();
     }
 
     private void Movement()
@@ -36,5 +49,37 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector3(horizontalInput, 1, 1);
         }
+    }
+
+    private void CheckInput()
+    {
+        if (Input.GetButtonDown("Jump") && isGround)
+        {
+            canJump = true;
+        }
+    }
+
+    private void Jump()
+    {
+        if (canJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.gravityScale = 4;
+            canJump = false;
+        }
+    }
+
+    private void PhysicsCheck()
+    {
+        isGround = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        if (isGround)
+        {
+            rb.gravityScale = 1;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
     }
 }
