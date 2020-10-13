@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
     public bool canJump;
     public bool isJump;
 
+    [Header("Jump FX")]
+    public GameObject jumpFX;
+    public GameObject landFX;
+
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +69,8 @@ public class PlayerController : MonoBehaviour
         if (canJump)
         {
             isJump = true;
+            jumpFX.SetActive(true);
+            jumpFX.transform.position = transform.position + new Vector3(0, -0.4f, 0);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             rb.gravityScale = 4;
             canJump = false;
@@ -79,6 +85,13 @@ public class PlayerController : MonoBehaviour
             rb.gravityScale = 1;
             isJump = false;
         }
+    }
+
+
+    public void LandFX()
+    {
+        landFX.SetActive(true);
+        landFX.transform.position = transform.position + new Vector3(0, -0.7f, 0);
     }
 
     private void OnDrawGizmos()
