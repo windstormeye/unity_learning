@@ -25,6 +25,11 @@ public class PlayerController : MonoBehaviour
     public GameObject jumpFX;
     public GameObject landFX;
 
+    [Header("Attack Settings")]
+    public GameObject bombPrefab;
+    public float nextAttack = 0;
+    public float attackRate;
+
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +67,11 @@ public class PlayerController : MonoBehaviour
         {
             canJump = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Attck();
+        }
     }
 
     private void Jump()
@@ -74,6 +84,16 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             rb.gravityScale = 4;
             canJump = false;
+        }
+    }
+
+    public void Attck()
+    {
+        if (Time.time > nextAttack)
+        {
+            Instantiate(bombPrefab, transform.position, bombPrefab.transform.rotation);
+
+            nextAttack = Time.time + attackRate;
         }
     }
 
