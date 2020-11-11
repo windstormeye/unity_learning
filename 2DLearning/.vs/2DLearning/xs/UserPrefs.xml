@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{14DBBBDF-8BAB-8856-4E3F-741F2CAA30B8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FX/JumpFX.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Bomb/Bomb.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="80" Column="28" />
-      <File FileName="Assets/Scripts/Player/PlayerAnimation.cs" Line="23" Column="51" />
-      <File FileName="Assets/Scripts/FX/JumpFX.cs" Line="7" Column="24" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="74" Column="63" />
+      <File FileName="Assets/Scripts/Player/PlayerAnimation.cs" />
+      <File FileName="Assets/Scripts/FX/JumpFX.cs" />
+      <File FileName="Assets/Scripts/Bomb/Bomb.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,9 +12,10 @@
           <Node name="2DLearning" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="FX" expanded="True">
-                  <Node name="JumpFX.cs" selected="True" />
+                <Node name="Bomb" expanded="True">
+                  <Node name="Bomb.cs" selected="True" />
                 </Node>
+                <Node name="FX" expanded="True" />
                 <Node name="Player" expanded="True" />
               </Node>
             </Node>
@@ -24,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bf1a41e9-cfa4-4276-8e73-175a048a92f9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="590304a4-e11e-49bf-a7d4-449b6e28d2b1" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 2b659079428ac4848a14a2e46dc00ad9, type: 3}
+      value: {fileID: 21300000, guid: 6228cd2dd74c1490f996a08e2e22abcf, type: 3}
     - time: 0.05
       value: {fileID: 21300000, guid: 44e625425a3124a5b8a3fc914bf7298c, type: 3}
     - time: 0.1
@@ -58,7 +58,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 2b659079428ac4848a14a2e46dc00ad9, type: 3}
+    - {fileID: 21300000, guid: 6228cd2dd74c1490f996a08e2e22abcf, type: 3}
     - {fileID: 21300000, guid: 44e625425a3124a5b8a3fc914bf7298c, type: 3}
     - {fileID: 21300000, guid: 6228cd2dd74c1490f996a08e2e22abcf, type: 3}
     - {fileID: 21300000, guid: 86193fa80dbe84372a41f83dfef03050, type: 3}
@@ -78,7 +78,7 @@ AnimationClip:
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -92,4 +92,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: Explotion
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.45
+    functionName: DestroyThis
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
