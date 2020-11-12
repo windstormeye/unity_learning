@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{14DBBBDF-8BAB-8856-4E3F-741F2CAA30B8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Bomb/Bomb.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerController.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="74" Column="63" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="73" Column="21" />
       <File FileName="Assets/Scripts/Player/PlayerAnimation.cs" />
       <File FileName="Assets/Scripts/FX/JumpFX.cs" />
-      <File FileName="Assets/Scripts/Bomb/Bomb.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Bomb/Bomb.cs" Line="47" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,11 +12,11 @@
           <Node name="2DLearning" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Bomb" expanded="True">
-                  <Node name="Bomb.cs" selected="True" />
-                </Node>
+                <Node name="Bomb" expanded="True" />
                 <Node name="FX" expanded="True" />
-                <Node name="Player" expanded="True" />
+                <Node name="Player" expanded="True">
+                  <Node name="PlayerController.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
