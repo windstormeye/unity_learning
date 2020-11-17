@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    EnemyBaseState currentState;
+
     [Header("Movement")]
     public float speed;
     public Transform pointA, pointB;
@@ -11,20 +13,26 @@ public class Enemy : MonoBehaviour
 
     public List<Transform> attackList = new List<Transform>();
 
+    public PatrolState patrolState = new PatrolState();
+    public AttackState attackState = new AttackState();
+
     // Start is called before the first frame update
     void Start()
     {
-        SwitchPoint();
+        // NOTE: 开始就让敌人处于巡逻状态
+        TransitionToState(patrolState);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Abs(transform.position.x - targetPoint.position.x) < 0.01f)
-        {
-            SwitchPoint();
-        }
-        MoveToTarget();
+        currentState.OnUpdate(this);
+    }
+
+    public void TransitionToState(EnemyBaseState state)
+    {
+        currentState = state;
+        currentState.EnterState(this);
     }
 
     public void MoveToTarget()

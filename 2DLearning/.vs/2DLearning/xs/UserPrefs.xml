@@ -1,11 +1,15 @@
 ﻿<Properties StartupConfiguration="{14DBBBDF-8BAB-8856-4E3F-741F2CAA30B8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy/Enemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy/AttackState.cs">
     <Files>
       <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="73" Column="21" />
       <File FileName="Assets/Scripts/Player/PlayerAnimation.cs" />
       <File FileName="Assets/Scripts/FX/JumpFX.cs" />
       <File FileName="Assets/Scripts/Bomb/Bomb.cs" />
-      <File FileName="Assets/Scripts/Enemy/Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/Enemy.cs" Line="33" Column="39" />
+      <File FileName="Assets/Scripts/Enemy/Cucumber.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/EnemyBaseState.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/PatrolState.cs" Line="21" Column="34" />
+      <File FileName="Assets/Scripts/Enemy/AttackState.cs" Line="5" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +19,7 @@
               <Node name="Scripts" expanded="True">
                 <Node name="Bomb" expanded="True" />
                 <Node name="Enemy" expanded="True">
-                  <Node name="Enemy.cs" selected="True" />
+                  <Node name="AttackState.cs" selected="True" />
                 </Node>
                 <Node name="FX" expanded="True" />
                 <Node name="Player" expanded="True" />
