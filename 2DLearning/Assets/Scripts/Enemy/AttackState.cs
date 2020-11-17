@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackState : MonoBehaviour
+public class AttackState : EnemyBaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void EnterState(Enemy enemy)
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnUpdate(Enemy enemy)
     {
         
     }

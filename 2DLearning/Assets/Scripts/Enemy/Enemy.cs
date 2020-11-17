@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     EnemyBaseState currentState;
+    public Animator anim;
+    public int animState;
 
     [Header("Movement")]
     public float speed;
@@ -15,6 +17,16 @@ public class Enemy : MonoBehaviour
 
     public PatrolState patrolState = new PatrolState();
     public AttackState attackState = new AttackState();
+
+    public virtual void Init()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+    public void Awake()
+    {
+        Init();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +39,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         currentState.OnUpdate(this);
+        anim.SetInteger("state", animState);
     }
 
     public void TransitionToState(EnemyBaseState state)
