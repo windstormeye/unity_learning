@@ -13,6 +13,11 @@ public class Enemy : MonoBehaviour
     public Transform pointA, pointB;
     public Transform targetPoint;
 
+    [Header("Attack Settings")]
+    public float attackRate;
+    public float attackRange, skillRange;
+    private float nextAttack = 0;
+
     public List<Transform> attackList = new List<Transform>();
 
     public PatrolState patrolState = new PatrolState();
@@ -58,13 +63,28 @@ public class Enemy : MonoBehaviour
     // NOTE: 攻击玩家
     public void AttackAction()
     {
-
+        // NOTE: 注意距离判断
+        if (Vector2.Distance(transform.position, targetPoint.position) < attackRange)
+        {
+            if (Time.time > nextAttack)
+            {
+                anim.SetTrigger("attack");
+                nextAttack = Time.time + attackRate;
+            }
+        }
     }
 
     // NOTE: 淦炸弹
     public void SkillAction()
     {
-
+        if (Vector2.Distance(transform.position, targetPoint.position) < skillRange)
+        {
+            if (Time.time > nextAttack)
+            {
+                anim.SetTrigger("skill");
+                nextAttack = Time.time + attackRate;
+            }
+        }
     }
 
     public void FilpDirection()
