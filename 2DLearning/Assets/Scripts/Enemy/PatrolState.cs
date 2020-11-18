@@ -27,7 +27,7 @@ public class PatrolState : EnemyBaseState
         
         if (enemy.attackList.Count > 0)
         {
-            //enemy.TransitionToState(enemy.attackState);
+            enemy.TransitionToState(enemy.attackState);
         }
     }
 }
