@@ -4129,7 +4129,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1249469494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05a4ab5faff62481dacc270efb7968d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 90cddc189049842ce931856bd390e8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
@@ -4138,9 +4138,9 @@ MonoBehaviour:
   pointA: {fileID: 854208954}
   pointB: {fileID: 54277554}
   targetPoint: {fileID: 0}
-  attackRate: 2
-  attackRange: 1
-  skillRange: 1.5
+  attackRate: 0
+  attackRange: 0
+  skillRange: 0
   attackList: []
 --- !u!1 &1359132335
 GameObject:
@@ -4230,7 +4230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1692900927
 Transform:
   m_ObjectHideFlags: 0
