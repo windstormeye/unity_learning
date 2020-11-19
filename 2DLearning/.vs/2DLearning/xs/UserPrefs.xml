@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{14DBBBDF-8BAB-8856-4E3F-741F2CAA30B8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy/HitPoint.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/IDamageable.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemy/Enemy.cs" Line="83" Column="42" />
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" />
-      <File FileName="Assets/Scripts/Player/PlayerAnimation.cs" />
-      <File FileName="Assets/Scripts/FX/JumpFX.cs" />
-      <File FileName="Assets/Scripts/Bomb/Bomb.cs" />
-      <File FileName="Assets/Scripts/Enemy/Cucumber.cs" />
-      <File FileName="Assets/Scripts/Enemy/EnemyBaseState.cs" />
+      <File FileName="Assets/Scripts/Enemy/Enemy.cs" Line="84" Column="42" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FX/JumpFX.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Bomb/Bomb.cs" Line="60" Column="52" />
+      <File FileName="Assets/Scripts/Enemy/Cucumber.cs" Line="10" Column="45" />
+      <File FileName="Assets/Scripts/Enemy/EnemyBaseState.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Enemy/PatrolState.cs" Line="14" Column="21" />
-      <File FileName="Assets/Scripts/Enemy/AttackState.cs" Line="9" Column="29" />
-      <File FileName="Assets/Scripts/Enemy/HitPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/AttackState.cs" Line="31" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/HitPoint.cs" Line="11" Column="41" />
+      <File FileName="Assets/Scripts/IDamageable.cs" Line="5" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,10 +21,11 @@
               <Node name="Scripts" expanded="True">
                 <Node name="Bomb" expanded="True" />
                 <Node name="Enemy" expanded="True">
-                  <Node name="HitPoint.cs" selected="True" />
+                  <Node name="FSM" expanded="True" />
                 </Node>
                 <Node name="FX" expanded="True" />
                 <Node name="Player" expanded="True" />
+                <Node name="IDamageable.cs" selected="True" />
               </Node>
             </Node>
           </Node>

@@ -318,5 +318,6 @@
 "Assets/Scripts/Enemy/FSM/PatrolState.cs"
 "Assets/Scripts/Enemy/HitPoint.cs"
 "Assets/Scripts/FX/JumpFX.cs"
+"Assets/Scripts/IDamageable.cs"
 "Assets/Scripts/Player/PlayerAnimation.cs"
 "Assets/Scripts/Player/PlayerController.cs"

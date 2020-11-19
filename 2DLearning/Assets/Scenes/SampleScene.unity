@@ -478,6 +478,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 15
+  health: 1
+  isDead: 0
   groundCheck: {fileID: 765059160}
   checkRadius: 0.45
   groundLayer:
@@ -573,7 +575,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.2819903, y: -0.022520185}
+  m_Offset: {x: -1.9984957, y: 0.3680724}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -584,7 +586,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.5639806, y: 1.9758513}
+  m_Size: {x: 6.13097, y: 2.7570364}
   m_EdgeRadius: 0
 --- !u!1 &765059159
 GameObject:
@@ -3983,7 +3985,7 @@ GameObject:
   - component: {fileID: 1249469500}
   m_Layer: 10
   m_Name: Sprite Setting
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4045,7 +4047,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 855133277
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7480dddd483c0409497466344e5a3b85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4134,13 +4136,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   animState: 0
+  health: 1
+  isDead: 0
   speed: 2
   pointA: {fileID: 854208954}
   pointB: {fileID: 54277554}
   targetPoint: {fileID: 0}
-  attackRate: 0
-  attackRange: 0
-  skillRange: 0
+  attackRate: 2
+  attackRange: 1
+  skillRange: 1.5
   attackList: []
 --- !u!1 &1359132335
 GameObject:
