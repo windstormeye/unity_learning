@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     EnemyBaseState currentState;
     public Animator anim;
     public int animState;
+    private GameObject alarmSign;
 
     [Header("Enemy State")]
     public float health;
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
     public virtual void Init()
     {
         anim = GetComponent<Animator>();
+        alarmSign = transform.GetChild(0).gameObject;
     }
 
     public void Awake()
@@ -131,5 +133,19 @@ public class Enemy : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         attackList.Remove(collision.transform);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // NOTE: 开启协程
+        StartCoroutine(OnAlarm());
+    }
+
+    // NOTE: 创建协程
+    IEnumerator OnAlarm()
+    {
+        alarmSign.SetActive(true);
+        yield return new WaitForSeconds(alarmSign.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.length);
+        alarmSign.SetActive(false);
     }
 }
