@@ -124,7 +124,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (!attackList.Contains(collision.transform))
+        if (!attackList.Contains(collision.transform) && !GameManager.instance.gameOver)
         {
             attackList.Add(collision.transform);
         }
@@ -138,7 +138,10 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // NOTE: 开启协程
-        StartCoroutine(OnAlarm());
+        if (!GameManager.instance.gameOver)
+        {
+            StartCoroutine(OnAlarm());
+        }
     }
 
     // NOTE: 创建协程
