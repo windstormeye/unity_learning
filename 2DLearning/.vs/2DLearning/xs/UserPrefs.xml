@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{14DBBBDF-8BAB-8856-4E3F-741F2CAA30B8}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Manager/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemy/Enemy.cs" Line="141" Column="35" />
+      <File FileName="Assets/Scripts/Door/Door.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/Enemy.cs" />
       <File FileName="Assets/Scripts/Player/PlayerController.cs" />
       <File FileName="Assets/Scripts/Player/PlayerAnimation.cs" />
       <File FileName="Assets/Scripts/FX/JumpFX.cs" />
@@ -9,8 +10,8 @@
       <File FileName="Assets/Scripts/Enemy/Cucumber.cs" />
       <File FileName="Assets/Scripts/Enemy/HitPoint.cs" />
       <File FileName="Assets/Scripts/IDamageable.cs" />
-      <File FileName="Assets/Scripts/Manager/UIManager.cs" Line="52" Column="26" />
-      <File FileName="Assets/Scripts/Manager/GameManager.cs" Line="7" Column="22" />
+      <File FileName="Assets/Scripts/Manager/UIManager.cs" />
+      <File FileName="Assets/Scripts/Manager/GameManager.cs" Line="22" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,13 +20,14 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Bomb" expanded="True" />
+                <Node name="Door" expanded="True">
+                  <Node name="Door.cs" selected="True" />
+                </Node>
                 <Node name="Enemy" expanded="True">
                   <Node name="FSM" expanded="True" />
                 </Node>
                 <Node name="FX" expanded="True" />
-                <Node name="Manager" expanded="True">
-                  <Node name="GameManager.cs" selected="True" />
-                </Node>
+                <Node name="Manager" expanded="True" />
                 <Node name="Player" expanded="True" />
               </Node>
             </Node>
@@ -36,7 +38,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5aeb475e-c6c1-46fa-b5dd-65ab3e76d14f" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="28a54a03-4e9f-4d10-83ef-ecc03184a42c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
