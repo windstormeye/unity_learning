@@ -32,8 +32,6 @@ public class Enemy : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         alarmSign = transform.GetChild(0).gameObject;
-
-        //GameManager.instance.IsEnemy(this);
     }
 
     public void Awake()
@@ -44,6 +42,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.instance.IsEnemy(this);
         // NOTE: 开始就让敌人处于巡逻状态
         TransitionToState(patrolState);
     }

@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     private Rigidbody2D rb;
     private Animator anim;
+    private FixedJoystick joystick;
 
     public float speed;
     public float jumpForce;
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour, IDamageable
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        joystick = FindObjectOfType<FixedJoystick>();
 
         health = GameManager.instance.LoadHealth();
         UIManager.instance.UpdateHealth(health);
@@ -73,12 +75,26 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     private void Movement()
     {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        // 键盘操作
+        //float horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        // 按钮操作
+        float horizontalInput = joystick.Horizontal;
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
 
-        if (horizontalInput != 0)
+        //if (horizontalInput != 0)
+        //{
+        //    transform.localScale = new Vector3(horizontalInput, 1, 1);
+        //}
+
+        if (horizontalInput > 0)
         {
-            transform.localScale = new Vector3(horizontalInput, 1, 1);
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+
+        if (horizontalInput < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
         }
     }
 
@@ -95,7 +111,7 @@ public class PlayerController : MonoBehaviour, IDamageable
         }
     }
 
-    private void Jump()
+    void Jump()
     {
         if (canJump)
         {
@@ -106,6 +122,11 @@ public class PlayerController : MonoBehaviour, IDamageable
             rb.gravityScale = 4;
             canJump = false;
         }
+    }
+
+    public void ButtonJump()
+    {
+        canJump = true;
     }
 
     public void Attck()
