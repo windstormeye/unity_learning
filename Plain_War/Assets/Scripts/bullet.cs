@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public float speed = 1.2f;
 
@@ -28,8 +28,14 @@ public class bullet : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            Destroy(this.gameObject);
-            Destroy(collision.gameObject);
+            Enemy enemy = collision.gameObject.GetComponent("Enemy") as Enemy;
+            enemy.HP -= 1;
+
+            if (enemy.HP == 0)
+            {
+                Destroy(this.gameObject);
+                Destroy(collision.gameObject);
+            }
         }
     }
 }
