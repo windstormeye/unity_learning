@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Main : MonoBehaviour
 {
     public GameObject[] monsterPrefabs;
     public GameObject bgPrefab;
+    public GameObject playerPrefab;
     public float bgSpeed = 1.2f;
+    public Text scoreLabel;
 
     private float timePass = 0;
     private float timeInterver = 2;
+    private int score = 0;
 
     private GameObject bg0;
     private GameObject bg1;
@@ -22,6 +26,7 @@ public class Main : MonoBehaviour
         Application.targetFrameRate = 60;
 
         initBackground();
+        CreatePlayer();
     }
 
     // Update is called once per frame
@@ -35,6 +40,12 @@ public class Main : MonoBehaviour
         }
 
         updateBackground();
+    }
+
+    private void CreatePlayer()
+    {
+        GameObject player = Instantiate(playerPrefab);
+        player.transform.position = new Vector3(0, -2, 0);
     }
 
     private void CreateMonster()
@@ -79,5 +90,11 @@ public class Main : MonoBehaviour
         {
             bg2.transform.Translate(0, 20, 0);
         }
+    }
+
+    public void addScore()
+    {
+        score += 1;
+        scoreLabel.text = score.ToString();
     }
 }

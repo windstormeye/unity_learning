@@ -26,36 +26,63 @@ public class Player : MonoBehaviour
         {
             Vector3 bulletPos = transform.position + new Vector3(0, 0.5f, 0);
             GameObject bullet = Instantiate(bulletPrefab, bulletPos, transform.rotation);
+
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.PlayOneShot(audio.clip);
+
             timeCount = 0;
         }
 
+        float screenLeft = -2.5f;
+        float screenRight = 2.5f;
+        float screenTop = 5f;
+        float screenBottom = -5f;
+
         float step = speed * Time.deltaTime;
+        Vector3 prePosition = transform.position;
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(-step, 0, 0);
+            if (transform.position.x <= screenLeft)
+            {
+                transform.position = new Vector3(screenLeft, prePosition.y, prePosition.z);
+            }
         }
-
+        
         if (Input.GetKey(KeyCode.RightArrow))
-        {
+        { 
             transform.Translate(step, 0, 0);
+            if (transform.position.x >= screenRight)
+            {
+                transform.position = new Vector3(screenRight, prePosition.y, prePosition.z);
+            }
         }
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(0, step, 0);
+            if (transform.position.y >= screenTop)
+            {
+                transform.position = new Vector3(prePosition.x, screenTop, prePosition.z);
+            }
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.Translate(0, -step, 0);
+            if (transform.position.y <= screenBottom)
+            {
+                transform.position = new Vector3(prePosition.x, screenBottom, prePosition.z);
+            }
         }
     }   
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.tag == "Enemy")
         {
-            redenderer.color = Color.red;
+            Destroy(gameObject);
         }
     }
 }

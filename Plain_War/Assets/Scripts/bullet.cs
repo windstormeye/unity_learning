@@ -28,13 +28,17 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
+            Destroy(this.gameObject);
+
             Enemy enemy = collision.gameObject.GetComponent("Enemy") as Enemy;
             enemy.HP -= 1;
 
             if (enemy.HP == 0)
             {
-                Destroy(this.gameObject);
                 Destroy(collision.gameObject);
+
+                Main main = GameObject.Find("Main").GetComponent("Main") as Main;
+                main.addScore();
             }
         }
     }
