@@ -20,19 +20,26 @@ public class Player : MonoBehaviour
     private void move()
     {
         float step = speed * Time.deltaTime;
+        float selfWidth = GetComponent<SpriteRenderer>().bounds.size.x / 2;
+
+        float screenLeft = -9.0f + selfWidth;
+        float screenRight = 9.0f - selfWidth;
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(-step, 0, 0);
-            // TODO: ±ﬂΩÁ≈–∂œ
+            if (transform.position.x <= screenLeft)
+            {
+                transform.position = new Vector3(screenLeft, transform.position.y, 0);
+            }
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(step, 0, 0);
-            // TODO: ±ﬂΩÁ≈–∂œ
+            if (transform.position.x >= screenRight)
+            {
+                transform.position = new Vector3(screenRight, transform.position.y, 0);
+            }
         }
-
-        // TODO: Ã¯‘æ
-
     }
  }
