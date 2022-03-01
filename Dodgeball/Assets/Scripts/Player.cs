@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
         float screenLeft = -9.0f + selfWidth;
         float screenRight = 9.0f - selfWidth;
-
+        // TODO: 把小球独立出来
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(-step, 0, 0);
